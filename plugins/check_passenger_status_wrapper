@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+#set -x
+#exec >> /tmp/nagios.log 2>&1
+
+export rvm_bin_path=/usr/local/rvm/bin
+export GEM_HOME=/usr/local/rvm/gems/ruby-1.9.3-p194
+export IRBRC=/usr/local/rvm/rubies/ruby-1.9.3-p194/.irbrc
+export MY_RUBY_HOME=/usr/local/rvm/rubies/ruby-1.9.3-p194
+export rvm_path=/usr/local/rvm
+export rvm_prefix=/usr/local
+export PATH=/usr/local/rvm/gems/ruby-1.9.3-p194/bin:/usr/local/rvm/gems/ruby-1.9.3-p194@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p194/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+export rvm_env_string=ruby-1.9.3-p194
+export rvm_version=1.15.8
+export rvm_ruby_string=ruby-1.9.3-p194
+export GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p194:/usr/local/rvm/gems/ruby-1.9.3-p194@global
+
+
+/usr/lib64/nagios/plugins/check_passenger_status.rb $@
