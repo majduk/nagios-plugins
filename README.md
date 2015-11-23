@@ -35,5 +35,5 @@ The best way to monitor the server and make sure it is running is to install [Mo
 ```
 command[check_monit]=/usr/local/bin/check_monit -H localhost
 ```
-The monit plugin can be found in this repo [here](./blob/master/plugins/check_monit.py). The plugin requires python.
+The monit plugin can be found in this repo [here](./plugins/check_monit.py). The plugin requires python.
 
