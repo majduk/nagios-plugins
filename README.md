@@ -1,10 +1,5 @@
-# Nagios plugins
 
-The repository contains usefull Nagios NRPE plugins.
-
-# NRPE config example
-
-Below you can find some NRPE config examples:
+The repository contains useful Nagios NRPE plugins and some configuration examples balow.
 
 ### Basic server monitoring
 ```
@@ -26,12 +21,20 @@ command[check_mysql]=/usr/lib64/nagios/plugins/check_mysql -unrpe -pnrpe -H loca
 
 Postgres:
 ```
+command[check_pgsql]=/usr/lib64/nagios/plugins/check_pgsql -Hlocalhost -pnrpe -lnrpe -ddatabase
 command[check_postgres_proc]=/usr/lib64/nagios/plugins/check_procs -a postgres -c 3:100 -u postgres
+```
+
+### Rails passenger monitoring
+
+```
+command[check_http]=/usr/lib64/nagios/plugins/check_http -I localhost -p 8080
+command[check_passenger_status]=/usr/bin/sudo /usr/lib64/nagios/plugins/contrib/check_passenger_status_wrapper -w 2 -c 15
 ```
 
 ### Monit monitoring
 
-The best way to monitor the server and make sure it is running is to install [Monit](https://mmonit.com/monit/), and then monitor it.
+The best way to monitor a server and make sure it is running is to install [monit](https://mmonit.com/monit/), and then monitor it.
 ```
 command[check_monit]=/usr/local/bin/check_monit -H localhost
 ```
