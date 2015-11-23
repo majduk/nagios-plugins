@@ -1,5 +1,5 @@
 
-The repository contains useful Nagios NRPE plugins and some configuration examples balow.
+This repository contains some useful Nagios NRPE plugins and some configuration examples below.
 
 ### Basic server monitoring
 ```
